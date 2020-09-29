@@ -558,6 +558,8 @@
         "system/lib64/vendor.qti.hardware.radio.uim@1.1.so",
         "system/lib/vendor.qti.hardware.radio.uim@1.1.so",
         "product/etc/ambient/matcher_tah.leveldb",
+        "product/etc/firmware/music_detector.descriptor",
+        "product/etc/firmware/music_detector.sound_model",
         "product/etc/permissions/android.hardware.telephony.euicc.xml",
         "product/etc/permissions/com.android.omadm.service.xml",
         "product/etc/permissions/com.android.sdm.plugins.connmo.xml",
