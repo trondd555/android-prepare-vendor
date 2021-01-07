@@ -1013,14 +1013,18 @@ update_ab_ota_partitions() {
   {
     echo "# Partitions to add in AB OTA images"
     echo 'AB_OTA_PARTITIONS += vendor \'
-    for partition in "${EXTRA_IMGS[@]}"
-    do
-      echo "    $partition \\"
-    done
-    for partition in "${OTA_IMGS[@]}"
-    do
-      echo "    $partition \\"
-    done
+    if [[ "$EXTRA_IMGS_LIST" != "" ]]; then
+      for partition in "${EXTRA_IMGS[@]}"
+      do
+        echo "    $partition \\"
+      done
+    fi
+    if [[ "$OTA_IMGS_LIST" != "" ]]; then
+      for partition in "${OTA_IMGS[@]}"
+      do
+        echo "    $partition \\"
+      done
+    fi
   }  >> "$outMk"
   strip_trail_slash_from_file "$outMk"
 }
